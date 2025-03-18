@@ -1,23 +1,33 @@
 import { GalleryVerticalEnd } from "lucide-react";
 import Image from "next/image";
-import { LoginForm } from "@/components/login-form";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
-export default function LoginPage() {
+export default function ComingSoon() {
   return (
     <div className="grid min-h-svh lg:grid-cols-2">
-      <div className="flex flex-col gap-4 p-6 md:p-10">
+      <div className="flex flex-col gap-8 p-6 md:p-10">
         <div className="flex justify-center gap-2 md:justify-start">
-          <a href="#" className="flex items-center gap-2 font-medium">
+          <Link href="/" className="flex items-center gap-2 font-medium">
             <div className="flex h-6 w-6 items-center justify-center rounded-md bg-primary text-primary-foreground">
               <GalleryVerticalEnd className="size-4" />
             </div>
             ChickenCare Inc.
-          </a>
+          </Link>
         </div>
-        <div className="flex flex-1 items-center justify-center">
-          <div className="w-full max-w-xs">
-            <LoginForm />
+        <div className="flex flex-1 flex-col items-center justify-center gap-6 text-center">
+          <div className="space-y-4">
+            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
+              Em Breve
+            </h1>
+            <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl">
+              Estamos preparando algo incrível para você. Nossa equipe está
+              trabalhando duro para trazer novidades.
+            </p>
           </div>
+          <Button asChild className="w-full max-w-xs">
+            <Link href="/">Voltar ao Início</Link>
+          </Button>
         </div>
       </div>
       <div className="relative hidden overflow-hidden lg:block">
