@@ -2,6 +2,7 @@ import { PoultryMetrics } from "@/components/poultry-metrics";
 import { CycleOverview } from "@/components/cycle-overview";
 import { RecentActivity } from "@/components/recent-activity";
 import { PoultryHouseTable } from "@/components/poultry-house-table";
+import { ModeToggle } from "@/components/mode-toggle";
 
 export default function DashboardPage() {
   return (
@@ -13,6 +14,7 @@ export default function DashboardPage() {
         <p className="text-muted-foreground">
           Monitore e gerencie seus aviários e métricas de produção.
         </p>
+        <ModeToggle />
       </div>
 
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
